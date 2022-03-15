@@ -35,4 +35,7 @@ class Copo(Recipiente):
             return f"Um copo de {self.tamanho}ml contendo {self.conteudo}ml de {self.bebida}"
 
     def __repr__(self):
-        return f"Um recipiente {self.estado()} não especificado"
+        if self.conteudo == 0:
+            return f"Um copo vazio de {self.tamanho}ml"
+        else:
+            return f"Um copo de {self.tamanho}ml contendo {self.conteudo}ml de {self.bebida}"
